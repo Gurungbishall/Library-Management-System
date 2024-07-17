@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(loginpic.png);
+}
+
+.container_body {
+    height: 800px;
+    width: 500px;
+    margin-top: 60px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: orange;
+    border-radius: 0 10px 10px 0;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.login {
+    font-size: 33px;
+    font-weight: bolder;
+    padding-bottom: 15px;
+}
+
+.form {
+    width: 400px;
+    height: 200px;
+    padding-left: 10px;
+    display: grid;
+    gap: 20px;
+    align-items: center;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 10px 0 10px 5px;
+    font-size: 20px;
+}
+
+
+input:active,
+input:hover {
+    border-bottom-color: black;
+}
+
+
+.password_field {
+    position: relative;
+}
+
+img {   
+    position: absolute;
+    width: 25px;
+    top: 30%;
+    right: 4%;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: aliceblue;
+    background-color: rgb(0, 103, 105);
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 35%;
+}
+
+button:focus,
+button:hover {
+    color: black;
+    background-color: rgb(238, 238, 238);
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="left_container">
+      <nav class="side_nav">
+        <div class="side_nav_header">Library</div>
+        <div>
+          <ul>
+            <li>
+              <a href=""
+                ><i class="fa-solid fa-house-user"></i>
+                <p>Dashbord</p></a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-solid fa-arrows-rotate"></i>
+                <p>Library loan</p></a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-solid fa-book"></i>
+                <p>Cataloging</p>
+              </a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-solid fa-users"></i>
+                <p>Members</p></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="right_container">
+      <nav class="top_nav">
+        <div class="search">
+          <button class="All_btn" id="btn">
+            All<i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div id="search_option" class="search_option">
+            <a href="">All</a>
+            <a href="">Title</a>
+            <a href="">Author</a>
+            <a href="">Text</a>
+            <a href="">Subjects</a>
+          </div>
+          <form id="form">
+            <input type="text" placeholder="Search...." />
+          </form>
+          <button class="submit" id="formsubmit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+        <button class="Lang">Lang<i class="fa-solid fa-caret-down"></i></button>
+
+        <div>Time</div>
+
+        <button class="user" id="user">
+          <i class="fa-solid fa-user"></i>
+          Bishal
+          <i class="fa-solid fa-caret-down"></i>
+          <div class="user_option" id="user_option">
+            <a href="">Profile</a>
+            <a href="">Favourite</a>
+            <a href="">Payments</a>
+            <a href="">Logout</a>
+          </div>
+        </button>
+      </nav>
+      <div class="inner_container"></div>
+    </div>
+  </body>
+  <script src="admin.js"></script>
+</html>

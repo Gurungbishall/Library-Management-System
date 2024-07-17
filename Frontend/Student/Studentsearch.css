@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.side_nav {
+    height: 100%;
+    width: 300px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.side_nav_header {
+    height: 200px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+    padding-top: 100px;
+}
+
+.side_nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.side_nav li {
+    list-style-type: none;
+}
+
+.side_nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    display: flex;
+    gap: 20px;
+    height: 40px;
+}
+
+
+.right_container {
+    width: 100%;
+    height: 100vh;
+    padding-left: 300px;
+}
+
+.top_nav {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(211, 208, 208);
+    top: 0;
+    z-index: 1;
+    height: 60px;
+}
+
+.search {
+    display: flex;
+    padding-left: 40px;
+}
+
+.search button {
+    float: left;
+    width: 60px;
+}
+
+.search_option {
+    top: 3rem;
+    position: absolute;
+    gap: 5px;
+    width: 9rem;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 6%;
+    overflow: auto;
+    background: white;
+    box-shadow: 2px 2px 10px gray;
+    transition: all .3s ease-in-out;
+}
+
+.search_option a {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    display: grid;
+}
+
+.All_btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 14px 0px 0px 14px;
+    border-right: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.All_btn i {
+    padding-left: 5px;
+}
+
+input[type=text] {
+    height: 40px;
+    width: 250px;
+    font-size: 20px;
+    float: left;
+    padding-left: 5px;
+}
+
+.submit {
+    height: 40px;
+    width: 65px;
+    float: left;
+    border-left: none;
+    border-radius: 0px 14px 14px 0px;
+}
+
+.Lang {
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+}
+
+.Lang i {
+    padding-left: 8px;
+}
+
+.time_date {
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    gap: 40px;
+    height: 40px;
+    width: 300px;
+    color: red;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 8px;
+}
+
+.time_date div {
+    display: flex;
+    gap: 7px;
+
+}
+
+.user {
+    height: 40px;
+    width: 100px;
+    margin-right: 20px;
+
+}
+
+.user i {
+    padding: 6px;
+}
+
+.user_option {
+    top: 3rem;
+    position: absolute;
+    overflow: auto;
+    width: 6rem;
+    text-align: left;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 15px;
+    background: white;
+    border-radius: 6%;
+    transition: all .3s ease-in-out;
+}
+
+.user_option a {
+    text-decoration: none;
+    color: black;
+}
+
+.inner_container {
+    background-color: rgba(211, 208, 208);
+    height: 100vh;
+}
+
+.Browse {
+    padding: 10px 0px 10px 40px;
+    position: fixed;
+    width: 101em;
+    background-color: rgba(211, 208, 208);
+}
+
+.Browse button {
+    height: 30px;
+    width: 120px;
+    font-size: 18px;
+}
+
+.Browse div {
+    margin-top: 10px;
+    z-index: 1;
+    position: absolute;
+}
+
+.Browse ul {
+    display: flex;
+    gap: 9px;
+    height: 100px;
+    width: 120px;
+    font-size: 17px;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+}
+
+.Browse li {
+    list-style-type: none;
+    height: 20px;
+}
+
+.books {
+    padding-top: 80px;
+    width: 95rem;
+    padding-left: 40px;
+}
+
+.books_headers {
+    display: flex;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.books_header_2 {
+    padding-left: 25rem;
+}
+.books_header_3 {
+   padding-left: 3rem;
+}
+.books_header_4 {
+    padding-left: 15rem;
+}
+.books_header_5 {
+    padding-left: 9rem;
+}
+.book1,
+.book2,
+.book3,
+.book4 {
+    margin-top: 20px;
+    height: 100px;
+    border: 2px solid black;
+}

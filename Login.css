@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(loginpic.png);
+}
+
+.inner-container {
+    width: 700px;
+    height: 430px;
+    border-radius: 10px;
+    background-color: rgb(83, 87, 99);
+    opacity: 0.85;
+}
+
+.left {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(125, 255, 4);
+    float: left;
+    width: 295px;
+    height: 430px;
+    padding-top: 20%;
+}
+
+.right {
+    float: right;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 400px;
+    height: 430px;
+    background-color: orange;
+    border-radius: 0 10px 10px 0;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.login {
+    font-size: 33px;
+    font-weight: bolder;
+    padding-bottom: 15px;
+}
+
+.form {
+    width: 400px;
+    height: 200px;
+    display: grid;
+    gap: 10px;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.login_field {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+}
+
+.login_field input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 10px 0 10px 5px;
+    font-size: 20px;
+}
+
+.password_field i {
+    position: absolute;
+    top: 30%;
+    left: 3px;
+}
+
+.pass-icon {
+    position: absolute;
+    width: 25px;
+    top: 30%;
+    right: 4%;
+}
+
+input:active,
+input:hover {
+    border-bottom-color: black;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: aliceblue;
+    background-color: rgb(0, 103, 105);
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 35%;
+}
+
+button:focus,
+button:hover {
+    color: black;
+    background-color: rgb(238, 238, 238);
+
+}
+
+.forget {
+    font-size: 19px;
+}
+
+
+a {
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+
+}
+
+.forget:hover,
+a:hover {
+    color: white;
+}
+
+.other {
+    display: flex;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.icon-1 {
+    color: white;
+}
+
+.icon-1:hover {
+    color: rgb(80, 199, 199);
+}
+
+.icon-2 {
+    color: white;
+}
+
+.icon-2:hover {
+    color: rgb(66, 103, 178);
+}
+
+.icon-3 {
+    color: white;
+}
+
+.icon-3:hover {
+    color: black;
+}

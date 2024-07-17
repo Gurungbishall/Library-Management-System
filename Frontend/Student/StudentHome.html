@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="StudentHome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="left_container">
+      <nav class="side_nav">
+        <div class="side_nav_header">Library</div>
+        <div>
+          <ul>
+            <li>
+              <a href="StudentHome.html"
+                ><i class="fa-solid fa-house-user"></i>
+                <p>Home</p></a
+              >
+            </li>
+            <li>
+              <a href="studentsearch.html "
+                ><i class="fa fa-search"></i>
+                <p>Search</p></a
+              >
+            </li>
+            <li>
+              <a href="studentshelf.html"
+                ><i class="fa-solid fa-book"></i>
+                <p>My shelf</p></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="right_container">
+      <nav class="top_nav">
+        <div class="search">
+          <button class="All_btn" id="btn">
+            All<i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div id="search_option" class="search_option">
+            <a href="">All</a>
+            <a href="">Title</a>
+            <a href="">Author</a>
+            <a href="">Text</a>
+            <a href="">Subjects</a>
+          </div>
+          <form id="form">
+            <input type="text" placeholder="Search...." />
+          </form>
+          <button class="submit" id="formsubmit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+        <button class="Lang">Lang<i class="fa-solid fa-caret-down"></i></button>
+
+        <div class="time_date">
+          <div>
+            <i class="fa-regular fa-clock"></i>
+            <div id="time"></div>
+          </div>
+          <div>
+            <i class="fa-regular fa-calendar-days"></i>
+            <div id="date"></div>
+          </div>
+        </div>
+
+        <button class="user" id="user">
+          <i class="fa-solid fa-user"></i>
+          Bishal
+          <i class="fa-solid fa-caret-down"></i>
+          <div class="user_option" id="user_option">
+            <a href="">Profile</a>
+            <a href="">Favourite</a>
+            <a href="">Payments</a>
+            <a href="">Logout</a>
+          </div>
+        </button>
+      </nav>
+
+      <div class="inner_container">
+        <div class="book">
+          <div class="top_book_nav">
+            <p>Recommeded for you</p>
+            <button onclick="Showall()">Show all</button>
+          </div>
+          <div class="list_of_book" id="book"></div>
+        </div>
+
+        <div class="book">
+          <div class="top_book_nav">
+            <p>Recent Readings</p>
+            <button id="show_all">Show all</button>
+          </div>
+          <div class="list_of_book" id="book1"></div>
+        </div>
+
+        <div class="book">
+          <div class="top_book_nav">
+            <p>Academic Books</p>
+            <button>Show all</button>
+          </div>
+          <div class="list_of_book" id="book2"></div>
+        </div>
+
+        <div class="book">
+          <div class="top_book_nav">
+            <p>Jourals, Articles & Paper Publications</p>
+            <button>Show all</button>
+          </div>
+          <div class="list_of_book" id="book3"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../../Backened/Time/time.js"></script>
+  <script src="../../Backened/book/app.js"></script>
+</html>
