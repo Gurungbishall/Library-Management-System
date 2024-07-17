@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
     .then((data) => {
       console.log(data);
       if (data.success === true) {
-        window.location.assign("/Frontend/Student/StudentHome.html");
+        window.location.assign("../Frontend/Student/StudentHome.html");
       }
     })
     .catch((error) => console.log("problem"));
