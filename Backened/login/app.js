@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
     .then((data) => {
       console.log(data);
       if (data.success === true) {
-        window.location.href = "../Frontend/Student/StudentHome.html";
+        window.location.href="../Frontend/Student/StudentHome.html";
       }
     })
     .catch((error) => console.log("problem"));
