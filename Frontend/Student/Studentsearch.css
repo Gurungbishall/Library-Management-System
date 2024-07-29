@@ -56,7 +56,6 @@ body {
 
 .right_container {
     width: 100%;
-    height: 100vh;
     padding-left: 300px;
 }
 
@@ -195,7 +194,6 @@ input[type=text] {
 
 .inner_container {
     background-color: rgba(211, 208, 208);
-    height: 100vh;
 }
 
 .Browse {
@@ -248,20 +246,44 @@ input[type=text] {
 .books_header_2 {
     padding-left: 25rem;
 }
+
 .books_header_3 {
-   padding-left: 3rem;
+    padding-left: 3rem;
 }
+
 .books_header_4 {
     padding-left: 15rem;
 }
-.books_header_5 {
-    padding-left: 9rem;
-}
-.book1,
-.book2,
-.book3,
-.book4 {
+
+.book {
+    display: flex;
     margin-top: 20px;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+img {
     height: 100px;
-    border: 2px solid black;
+    width: 100px;
+}
+
+.book_title_author {
+    margin: 10px 0px 0px 20px;
+    width: 200px;
+}
+
+.book_title {
+    font-size: 20px;
+}
+
+.Rating {
+    padding-left: 7rem;
+}
+
+.Category {
+    padding-left: 5rem;
+}
+
+.Availability {
+    padding-left: 18rem;
 }

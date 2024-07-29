@@ -23,8 +23,11 @@ form.addEventListener("submit", (event) => {
     })
     .then((data) => {
       console.log(data);
-      if (data.success === true) {
-        window.location.href="../Frontend/Student/StudentHome.html";
+      // console.log(data.data.isAdmin);
+      if (data.success === true && data.data.isAdmin == false) {
+        window.location.href = "Frontend/Student/StudentHome.html";
+      } else {
+        window.location.href = "admin.html";
       }
     })
     .catch((error) => console.log("problem"));

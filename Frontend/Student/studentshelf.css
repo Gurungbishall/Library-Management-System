@@ -219,39 +219,104 @@ input[type=text] {
     font-size: 1.2rem;
 }
 
-.Book_list {
+.book_list {
     padding-top: 40px;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 40px;
+    column-gap: -10px;
+    row-gap: 30px;
 }
 
 .book {
-    border: 2px solid black;
     width: 300px;
-    height: 250px;
-    border-radius: 50px;
+    height: 220px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.book_img_title_author {
+    width: 120px;
+}
+
+.book img {
+    height: 150px;
+    width: 120px;
+}
+
+.book_title {
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.book_author {
+    font-size: 8px;
+}
+
+.Borrowed {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Borrowed_body {
+    font-size: 15px;
+}
+
+.Borrowed_btn {
+    background-color: black;
+    height: 40px;
+    font-size: 15px;
+    color: aliceblue;
+    font-weight: bolder;
+    border-radius: 20px;
 }
 
 .remainder {
     padding-top: 40px;
 }
 
-.remainder_header {
-    
- font-size: 1.7rem;
+.remainder_name {
+
+    font-size: 1.7rem;
 }
 
 .remainder_list {
-    padding-top: 40px;
+    padding-top: 30px;
     display: flex;
-    gap: 80px ;
+    gap: 80px;
     padding-bottom: 40px;
 }
 
 .remainder1 {
-    border: 2px solid black;
+    padding: 20px;
     width: 400px;
     height: 400px;
-    border-radius: 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.remainder1 div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.remainder_header {
+    font-size: 30px;
+}
+
+.remainder_body {
+    font-size: 20px;
+}
+
+.from_department {
+    font-size: 15px;
+}
+
+.remainder_date {
+    font-size: 10px;
 }
