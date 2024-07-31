@@ -33,12 +33,3 @@ async function book() {
   }
 }
 
-// const Showall = () => {
-//   let list_of_book = document.getElementById("book");
-
-//   if (list_of_book.className == "list_of_book") {
-//     list_of_book.classList.replace("list_of_book", "show_all");
-//   } else {
-//     list_of_book.classList.replace("show_all", "list_of_book");
-//   }
-// };

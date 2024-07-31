@@ -59,12 +59,20 @@
             <a href="">Text</a>
             <a href="">Subjects</a>
           </div>
-          <form id="form">
-            <input type="text" placeholder="Search...." />
-          </form>
-          <button class="submit" id="formsubmit">
-            <i class="fa fa-search"></i>
-          </button>
+          <div>
+            <form id="form_search">
+              <input
+                type="text"
+                placeholder="Search...."
+                name="text"
+                id="input_search"
+              />
+              <button class="submit" id="formsubmit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div class="search_result"></div>
+          </div>
         </div>
 
         <button class="Lang">Lang<i class="fa-solid fa-caret-down"></i></button>
@@ -130,4 +138,5 @@
   </body>
   <script src="../../Backened/Time/time.js"></script>
   <script src="../../Backened/book/app.js"></script>
+  <script src="../../Backened/Search/search_field.js"></script>
 </html>

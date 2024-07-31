@@ -133,6 +133,29 @@ input[type=text] {
     border-radius: 0px 14px 14px 0px;
 }
 
+.search_result {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    background-color: rgba(211, 208, 208);
+    padding: 5px;
+}
+
+.book_search {
+    display: flex;
+    gap: 10px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.book_search img {
+    height: 50px;
+    width: 50px;
+
+}
+
 .Lang {
     height: 40px;
     width: 90px;

@@ -55,12 +55,20 @@
             <a href="">Text</a>
             <a href="">Subjects</a>
           </div>
-          <form id="form">
-            <input type="text" placeholder="Search...." />
-          </form>
-          <button class="submit" id="formsubmit">
-            <i class="fa fa-search"></i>
-          </button>
+          <div>
+            <form id="form_search">
+              <input
+                type="text"
+                placeholder="Search...."
+                name="text"
+                id="input_search"
+              />
+              <button class="submit" id="formsubmit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div class="search_result"></div>
+          </div>
         </div>
 
         <button class="Lang">Lang<i class="fa-solid fa-caret-down"></i></button>
@@ -102,7 +110,7 @@
             </ul>
           </div>
         </div>
-          
+
         <div class="books">
           <div class="books_headers">
             <p class="books_header_1">Title</p>
@@ -110,13 +118,12 @@
             <p class="books_header_3">Category</p>
             <p class="books_header_4">Availability</p>
           </div>
-          <div id="booklist">
-  
-          </div>
+          <div id="booklist"></div>
         </div>
       </div>
     </div>
   </body>
   <script src="../../Backened/Time/time.js"></script>
   <script src="../../Backened/Search/booklist.js"></script>
+  <script src="../../Backened/Search/search_field.js"></script>
 </html>
