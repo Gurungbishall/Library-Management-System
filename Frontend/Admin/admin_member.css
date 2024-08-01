@@ -79,12 +79,13 @@ body {
 
 .search button {
     float: left;
-    width: 60px;
+    width: 50px;
 }
 
 .search_option {
     top: 3rem;
     position: absolute;
+    display: none;
     gap: 5px;
     width: 9rem;
     padding: 5px;
@@ -107,7 +108,7 @@ body {
 
 .All_btn {
     height: 40px;
-    width: 100px;
+    width: 90px;
     border-radius: 14px 0px 0px 14px;
     border-right: none;
     font-size: 15px;
@@ -199,6 +200,7 @@ input[type=text] {
 }
 
 .user_option {
+    display: none;
     top: 3rem;
     position: absolute;
     overflow: auto;
@@ -218,130 +220,108 @@ input[type=text] {
 }
 
 .inner_container {
-    background-color: rgba(211, 208, 208);
-    padding-left: 40px;
+    background-color: rgba(211, 208, 208, 0.479);
 }
 
-.shelf {
-    padding-top: 20px;
-
-}
-
-.shelf_header {
-    font-size: 1.8rem;
-}
-
-.shelf_list_header {
-    padding-top: 20px;
-    display: flex;
-    gap: 150px;
-}
-
-.shelf_list_header a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-}
-
-.book_list {
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    column-gap: -10px;
-    row-gap: 30px;
-}
-
-.book {
-    width: 300px;
-    height: 220px;
-    background-color: aliceblue;
-    border-radius: 10px;
-    padding: 15px;
-    display: flex;
-    gap: 15px;
-}
-
-.book_img_title_author {
-    width: 120px;
-}
-
-.book img {
-    height: 150px;
-    width: 120px;
-}
-
-.book_title {
-    padding-top: 10px;
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.book_author {
-    font-size: 8px;
-}
-
-.Borrowed {
-    font-size: 20px;
+.first_inner_container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+
 }
 
-.Borrowed_body {
-    font-size: 15px;
+.Manage_student {
+    margin-top: 50px;
+    padding: 0px 40px;
 }
 
-.Borrowed_btn {
-    background-color: black;
-    height: 40px;
-    font-size: 15px;
-    color: aliceblue;
+.Manage_student_header {
+    font-size: 35px;
     font-weight: bolder;
-    border-radius: 20px;
 }
 
-.remainder {
-    padding-top: 40px;
-}
-
-.remainder_name {
-
-    font-size: 1.7rem;
-}
-
-.remainder_list {
-    padding-top: 30px;
-    display: flex;
-    gap: 80px;
-    padding-bottom: 40px;
-}
-
-.remainder1 {
-    padding: 20px;
-    width: 400px;
-    height: 400px;
-    border-radius: 10px;
-    background-color: aliceblue;
-}
-
-.remainder1 div {
+.student_listing {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: beige;
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
-.remainder_header {
-    font-size: 30px;
+.student_listing_header {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
 }
 
-.remainder_body {
+.student_listing_search {
+    margin-top: 20px;
     font-size: 20px;
 }
 
-.from_department {
-    font-size: 15px;
+.student_listing_search label {
+    padding-right: 10px;
 }
 
-.remainder_date {
-    font-size: 10px;
+.student_listing_search input {
+    float: none;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+table {
+    margin: 20px 20px;
+
+}
+
+td {
+    text-align: center;
+}
+
+.student_img {
+    width: 300px;
+}
+
+.student_id,
+.student_name,
+.email,
+.city {
+    width: 200px;
+}
+
+.Phone_number {
+    width: 200px;
+}
+
+.Action_edit {
+    width: 200px;
+}
+
+tr img {
+    height: 100px;
+    width: 150px;
+}
+
+.edit_student,
+.delete_student {
+    height: 40px;
+    width: 60px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.edit_student:hover,
+.delete_student:hover {
+    background-color: black;
+    color: white;
 }

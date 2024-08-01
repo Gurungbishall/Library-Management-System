@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src 'self' https://firebasestorage.googleapis.com;"
+    />
     <title>Document</title>
-    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="book_profile.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -20,27 +24,21 @@
         <div>
           <ul>
             <li>
-              <a href=""
+              <a href="../Student/StudentHome.html"
                 ><i class="fa-solid fa-house-user"></i>
-                <p>Dashbord</p></a
+                <p>Home</p></a
               >
             </li>
             <li>
-              <a href=""
-                ><i class="fa-solid fa-arrows-rotate"></i>
-                <p>Library loan</p></a
+              <a href="../Student/studentsearch.html "
+                ><i class="fa fa-search"></i>
+                <p>Search</p></a
               >
             </li>
             <li>
-              <a href=""
+              <a href="../Student/studentshelf.html"
                 ><i class="fa-solid fa-book"></i>
-                <p>Cataloging</p>
-              </a>
-            </li>
-            <li>
-              <a href=""
-                ><i class="fa-solid fa-users"></i>
-                <p>Members</p></a
+                <p>My shelf</p></a
               >
             </li>
           </ul>
@@ -61,17 +59,34 @@
             <a href="">Text</a>
             <a href="">Subjects</a>
           </div>
-          <form id="form">
-            <input type="text" placeholder="Search...." />
-          </form>
-          <button class="submit" id="formsubmit">
-            <i class="fa fa-search"></i>
-          </button>
+          <div>
+            <form id="form_search">
+              <input
+                type="text"
+                placeholder="Search...."
+                name="text"
+                id="input_search"
+              />
+              <button class="submit" id="formsubmit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <div class="search_result"></div>
+          </div>
         </div>
 
         <button class="Lang">Lang<i class="fa-solid fa-caret-down"></i></button>
 
-        <div>Time</div>
+        <div class="time_date">
+          <div>
+            <i class="fa-regular fa-clock"></i>
+            <div id="time"></div>
+          </div>
+          <div>
+            <i class="fa-regular fa-calendar-days"></i>
+            <div id="date"></div>
+          </div>
+        </div>
 
         <button class="user" id="user">
           <i class="fa-solid fa-user"></i>
@@ -79,14 +94,18 @@
           <i class="fa-solid fa-caret-down"></i>
           <div class="user_option" id="user_option">
             <a href="">Profile</a>
-            <a href="">Favourite</a>
-            <a href="">Payments</a>
             <a href="">Logout</a>
           </div>
         </button>
       </nav>
-      <div class="inner_container"></div>
+
+      <div class="inner_container">
+        <div class="first_inner_container">
+          <div class="book_profile"></div>
+        </div>
+      </div>
     </div>
   </body>
-  <script src="admin.js"></script>
+  <script src="../../Backened/Time/time.js"></script>
+  <script src="../../Backened/book/book_profile.js"></script>
 </html>

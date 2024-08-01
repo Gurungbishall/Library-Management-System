@@ -16,7 +16,7 @@ function showResults() {
 async function book() {
   const inputdata = input_search.value.trim();
   clearResults();
-  
+
   if (inputdata === "") {
     return;
   }
@@ -62,9 +62,8 @@ async function book() {
   }
 }
 
-// Debounce function to limit API calls
 function debounce(func, delay) {
-  return function(...args) {
+  return function (...args) {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => func.apply(this, args), delay);
   };

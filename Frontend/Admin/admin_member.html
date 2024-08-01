@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="img-src 'self' https://firebasestorage.googleapis.com;"
-    />
     <title>Document</title>
-    <link rel="stylesheet" href="StudentHome.css" />
+    <link rel="stylesheet" href="admin_member.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -23,22 +19,28 @@
         <div class="side_nav_header">Library</div>
         <div>
           <ul>
-            <li style="background-color: black; padding: 10px; border-radius: 20px;">
-              <a href="StudentHome.html" style="color: aliceblue;"
-                ><i class="fa-solid fa-house-user" ></i>
-                <p>Home</p></a
+            <li>
+              <a href="admin.html"
+                ><i class="fa-solid fa-house-user"></i>
+                <p>Dashbord</p></a
               >
             </li>
             <li>
-              <a href="studentsearch.html "
-                ><i class="fa fa-search"></i>
-                <p>Search</p></a
-              >
-            </li>
-            <li>
-              <a href="studentshelf.html"
+              <a href="admin_book.html"
                 ><i class="fa-solid fa-book"></i>
-                <p>My shelf</p></a
+                <p>Book</p>
+              </a>
+            </li>
+            <li
+              style="
+                background-color: black;
+                padding: 10px;
+                border-radius: 20px;
+              "
+            >
+              <a href="admin_member.html" style="color: aliceblue"
+                ><i class="fa-solid fa-users"></i>
+                <p>Members</p></a
               >
             </li>
           </ul>
@@ -90,53 +92,50 @@
 
         <button class="user" id="user">
           <i class="fa-solid fa-user"></i>
-          Bishal
+          Admin
           <i class="fa-solid fa-caret-down"></i>
           <div class="user_option" id="user_option">
             <a href="">Profile</a>
-            <a href="">Favourite</a>
-            <a href="">Payments</a>
             <a href="">Logout</a>
           </div>
         </button>
       </nav>
 
       <div class="inner_container">
-        <div class="book">
-          <div class="top_book_nav">
-            <p>Recommeded for you</p>
-            <button onclick="Showall()">Show all</button>
-          </div>
-          <div class="list_of_book" id="book"></div>
-        </div>
+        <div class="first_inner_container">
+          <div class="Manage_student">
+            <div class="Manage_student_header">Manage students</div>
 
-        <div class="book">
-          <div class="top_book_nav">
-            <p>Recent Readings</p>
-            <button id="show_all">Show all</button>
+            <div class="studemt_listing">
+              <div class="student_listing_header">Students Listing</div>
+              <div class="student_listing_search">
+                <label for="">Search</label>
+                <input
+                  type="text"
+                  name="student_listing_search"
+                  placeholder="search"
+                />
+              </div>
+              <table>
+                <tr>
+                  <th class="SN">#</th>
+                  <th class="student_img">Avatar</th>
+                  <th class="student_id">Student ID</th>
+                  <th class="student_name">Student Name</th>
+                  <th class="email">Email</th>
+                  <th class="Phone_number">Phone number</th>
+                  <th class="city">City</th>
+                  <th class="Action_edit">Action</th>
+                </tr>
+              </table>
+            </div>
           </div>
-          <div class="list_of_book" id="book1"></div>
-        </div>
-
-        <div class="book">
-          <div class="top_book_nav">
-            <p>Academic Books</p>
-            <button>Show all</button>
-          </div>
-          <div class="list_of_book" id="book2"></div>
-        </div>
-
-        <div class="book">
-          <div class="top_book_nav">
-            <p>Jourals, Articles & Paper Publications</p>
-            <button>Show all</button>
-          </div>
-          <div class="list_of_book" id="book3"></div>
         </div>
       </div>
     </div>
   </body>
   <script src="../../Backened/Time/time.js"></script>
-  <script src="../../Backened/book/app.js"></script>
-  <script src="../../Backened/Search/search_field.js"></script>
+  <script src="../../Backened/student/list_of_student.js"></script>
+  <script src="../../Backened/student/delete_student.js"></script>
+  <script src="../../Backened/student/transfer_SID.js"></script>
 </html>

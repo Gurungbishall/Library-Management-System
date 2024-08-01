@@ -13,7 +13,7 @@ async function book() {
     const arrayofbook = obj.data;
 
     arrayofbook.forEach((books) => {
-      const markup = `<div>
+      const markup = `<div class = "book_profile" book-profile-id = "${books.id}" onclick ="book_profile_id(event)">
         <img src="${books.attachment}" />
         <p>${books.title}</p>
         <p>${books.author}</p>
@@ -38,3 +38,25 @@ const Showall = () => {
     list_of_book.classList.replace("show_all", "list_of_book");
   }
 };
+
+
+function book_profile_id(event) {
+  let target = event.target;
+  while (target && !target.hasAttribute("book-profile-id")) {
+    target = target.parentElement;
+  }
+
+  if (target) {
+    const bookId = target.getAttribute("book-profile-id");
+    localStorage.setItem("selectedbookID", bookId);
+    console.log(bookId);
+
+    const currentPageURL = window.location.href;
+    localStorage.setItem("selectedURL", currentPageURL);
+    console.log(currentPageURL);
+
+    window.location.href = "../book/book_profile.html";
+  } else {
+    console.error("No book-profile-id found in the event target hierarchy.");
+  }
+}

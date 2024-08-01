@@ -46,10 +46,12 @@ body {
 
 .side_nav a {
     text-decoration: none;
-    color: black;
     font-size: 22px;
+    color: black;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
     height: 40px;
 }
 
@@ -253,13 +255,14 @@ img {
     width: 140px;
 }
 
-.list_of_book>div {
+.book_profile {
     padding: 10px;
     border: 0;
     background-color: antiquewhite;
     box-shadow: 2px 2px 2px black;
 
 }
+
 
 .show_all {
     margin: 20px 15px 0 40px;

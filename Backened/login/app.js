@@ -23,11 +23,13 @@ form.addEventListener("submit", (event) => {
     })
     .then((data) => {
       console.log(data);
-      // console.log(data.data.isAdmin);
+    
       if (data.success === true && data.data.isAdmin == false) {
         window.location.href = "Frontend/Student/StudentHome.html";
-      } else {
-        window.location.href = "admin.html";
+      } else if(data.success === true && data.data.isAdmin == true){
+        window.location.href = "Frontend/Admin/admin.html";
+      }else{
+        alert("Wrong password");
       }
     })
     .catch((error) => console.log("problem"));
