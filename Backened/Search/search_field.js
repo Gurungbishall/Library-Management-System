@@ -1,3 +1,14 @@
+username()
+async function username(){
+
+  //username//
+  const username = localStorage.getItem("Username").slice(0, 5);
+  document
+    .getElementById("user_name")
+    .insertAdjacentHTML("beforeend", username);
+}
+
+//searching boooks//
 const form_search = document.getElementById("form_search");
 const input_search = document.getElementById("input_search");
 const search_result = document.querySelector(".search_result");
@@ -44,7 +55,7 @@ async function book() {
 
     foundBooks.forEach((book) => {
       const markup = `
-        <div class="book_search">
+        <div class="book_search" book-profile-id="${book.id}" onclick="book_profile_id(event)">
           <img src="${book.attachment}" alt="${book.title} cover image" />
           <div class="book_search_title_author">
             <p class="book_title">${book.title}</p>
@@ -70,3 +81,26 @@ function debounce(func, delay) {
 }
 
 form_search.addEventListener("input", debounce(book, 300));
+
+
+//To click on cook and go to book details//
+function book_profile_id(event) {
+  let target = event.target;
+  while (target && !target.hasAttribute("book-profile-id")) {
+    target = target.parentElement;
+  }
+
+  if (target) {
+    const bookId = target.getAttribute("book-profile-id");
+    localStorage.setItem("selectedbookID", bookId);
+    console.log(bookId);
+
+    const currentPageURL = window.location.href;
+    localStorage.setItem("selectedURL", currentPageURL);
+    console.log(currentPageURL);
+
+    window.location.href = "../book/book_profile.html";
+  } else {
+    console.error("No book-profile-id found in the event target hierarchy.");
+  }
+}

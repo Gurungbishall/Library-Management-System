@@ -87,16 +87,17 @@
             <div id="date"></div>
           </div>
         </div>
-
-        <button class="user" id="user">
+        <div class="user" id="user">
           <i class="fa-solid fa-user"></i>
-          Bishal
+          <div id="user_name"></div>
           <i class="fa-solid fa-caret-down"></i>
           <div class="user_option" id="user_option">
-            <a href="">Profile</a>
-            <a href="">Logout</a>
+              <button>Profile</button>
+              <button>Favourite</button>
+              <button>Payments</button>
+              <button onclick="logout()">Logout</button>
           </div>
-        </button>
+      </div>
       </nav>
 
       <div class="inner_container">
@@ -107,5 +108,8 @@
     </div>
   </body>
   <script src="../../Backened/Time/time.js"></script>
+  <script src="../../Backened/Search/search_field.js"></script>
   <script src="../../Backened/book/book_profile.js"></script>
+  <script src="../../Backened/borrow/borrow_btn.js"></script>
+  <script src="../../Backened/logout/app.js"></script>
 </html>

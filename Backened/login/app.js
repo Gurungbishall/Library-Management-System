@@ -23,12 +23,14 @@ form.addEventListener("submit", (event) => {
     })
     .then((data) => {
       console.log(data);
-    
+
       if (data.success === true && data.data.isAdmin == false) {
+        localStorage.setItem("UserId", data.data.user.id);
+        localStorage.setItem("Username",data.data.user.name);
         window.location.href = "Frontend/Student/StudentHome.html";
-      } else if(data.success === true && data.data.isAdmin == true){
+      } else if (data.success === true && data.data.isAdmin == true) {
         window.location.href = "Frontend/Admin/admin.html";
-      }else{
+      } else {
         alert("Wrong password");
       }
     })

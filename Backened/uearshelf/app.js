@@ -2,7 +2,7 @@ book();
 async function book() {
   try {
     const res = await fetch(
-      " https://lms-backend.sachetsubedi001.com.np/api/books"
+      " https://lms-backend.sachetsubedi001.com.np/api/reservations/user/clzc0kc93000018r22rvzhf2m"
     );
 
     if (!res.ok) {
@@ -12,12 +12,15 @@ async function book() {
     console.log(obj);
     const arrayofbook = obj.data;
 
-    arrayofbook.forEach((books) => {
-      const markup = `<div class = "book" book-profile-id = "${books.id}" onclick ="book_profile_id(event)">
+    arrayofbook.forEach((reservation) => {
+
+      const book = reservation.book;
+
+      const markup = `<div class = "book" book-profile-id = "${book.id}" onclick ="book_profile_id(event)">
       <div class = "book_img_title_author">
-        <img src="${books.attachment}" />
-        <p class= "book_title">${books.title}</p>
-        <p class= "book_author">${books.author}</p>
+        <img src="${book.attachment}" />
+        <p class= "book_title">${book.title}</p>
+        <p class= "book_author">${book.author}</p>
         </div>
         <div class = "Borrowed">
           <div>
@@ -43,36 +46,5 @@ async function book() {
     });
   } catch (error) {
     console.log(error);
-  }
-}
-
-// const Showall = () => {
-//   let list_of_book = document.getElementById("book");
-
-//   if (list_of_book.className == "list_of_book") {
-//     list_of_book.classList.replace("list_of_book", "show_all");
-//   } else {
-//     list_of_book.classList.replace("show_all", "list_of_book");
-//   }
-// };
-
-function book_profile_id(event) {
-  let target = event.target;
-  while (target && !target.hasAttribute("book-profile-id")) {
-    target = target.parentElement;
-  }
-
-  if (target) {
-    const bookId = target.getAttribute("book-profile-id");
-    localStorage.setItem("selectedbookID", bookId);
-    console.log(bookId);
-
-    const currentPageURL = window.location.href;
-    localStorage.setItem("selectedURL", currentPageURL);
-    console.log(currentPageURL);
-
-    window.location.href = "../book/book_profile.html";
-  } else {
-    console.error("No book-profile-id found in the event target hierarchy.");
   }
 }

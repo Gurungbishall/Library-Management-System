@@ -36,7 +36,6 @@ async function students() {
           ${students.city}
           </td>
           <td class="edit_delete">
-          <button class= "edit_student" data-student-id="${students.id}" onclick="edit_student(event)">Edit</button>
           <button class= "delete_student" data-student-id="${students.id}" onclick="delete_student(event)">Delete</button>
           </td>
           </tr>

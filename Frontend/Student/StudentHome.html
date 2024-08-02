@@ -23,9 +23,15 @@
         <div class="side_nav_header">Library</div>
         <div>
           <ul>
-            <li style="background-color: black; padding: 10px; border-radius: 20px;">
-              <a href="StudentHome.html" style="color: aliceblue;"
-                ><i class="fa-solid fa-house-user" ></i>
+            <li
+              style="
+                background-color: black;
+                padding: 10px;
+                border-radius: 20px;
+              "
+            >
+              <a href="StudentHome.html" style="color: aliceblue"
+                ><i class="fa-solid fa-house-user"></i>
                 <p>Home</p></a
               >
             </li>
@@ -87,18 +93,17 @@
             <div id="date"></div>
           </div>
         </div>
-
-        <button class="user" id="user">
+        <div class="user" id="user">
           <i class="fa-solid fa-user"></i>
-          Bishal
+          <div id="user_name"></div>
           <i class="fa-solid fa-caret-down"></i>
           <div class="user_option" id="user_option">
-            <a href="">Profile</a>
-            <a href="">Favourite</a>
-            <a href="">Payments</a>
-            <a href="">Logout</a>
+              <button>Profile</button>
+              <button>Favourite</button>
+              <button>Payments</button>
+              <button onclick="logout()">Logout</button>
           </div>
-        </button>
+      </div>
       </nav>
 
       <div class="inner_container">
@@ -137,6 +142,7 @@
     </div>
   </body>
   <script src="../../Backened/Time/time.js"></script>
-  <script src="../../Backened/book/app.js"></script>
   <script src="../../Backened/Search/search_field.js"></script>
+  <script src="../../Backened/book/app.js"></script>
+  <script src="../../Backened/logout/app.js"></script>
 </html>

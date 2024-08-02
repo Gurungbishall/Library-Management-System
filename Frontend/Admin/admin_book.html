@@ -84,15 +84,15 @@
           </div>
         </div>
 
-        <button class="user" id="user">
+        <div class="user" id="user">
           <i class="fa-solid fa-user"></i>
-          Admin
+          <div id="user_name"></div>
           <i class="fa-solid fa-caret-down"></i>
           <div class="user_option" id="user_option">
-            <a href="">Profile</a>
-            <a href="">Logout</a>
+              <button>Profile</button>
+              <button onclick="logout()">Logout</button>
           </div>
-        </button>
+      </div>
       </nav>
 
       <div class="inner_container">
@@ -164,6 +164,8 @@
     </div>
   </body>
   <script src="../../Backened/Time/time.js"></script>
+  <script src="../../Backened/Search/search_field.js"></script>
   <script src="../../Backened/book/add_book.js"></script>
   <script src="../../Backened/book/delete_book.js"></script>
+  <script src="../../Backened/logout/app.js"></script>
 </html>

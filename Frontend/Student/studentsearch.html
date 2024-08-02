@@ -25,8 +25,14 @@
                 <p>Home</p></a
               >
             </li>
-            <li style="background-color: black; padding: 10px; border-radius: 20px;">
-              <a href="studentsearch.html" style="color: aliceblue;"
+            <li
+              style="
+                background-color: black;
+                padding: 10px;
+                border-radius: 20px;
+              "
+            >
+              <a href="studentsearch.html" style="color: aliceblue"
                 ><i class="fa fa-search"></i>
                 <p>Search</p></a
               >
@@ -84,17 +90,17 @@
           </div>
         </div>
 
-        <button class="user" id="user">
+        <div class="user" id="user">
           <i class="fa-solid fa-user"></i>
-          Bishal
+          <div id="user_name"></div>
           <i class="fa-solid fa-caret-down"></i>
-          <div class="user_option" id="user_option" style="display: none">
-            <a href="">Profile</a>
-            <a href="">Favourite</a>
-            <a href="">Payments</a>
-            <a href="">Logout</a>
+          <div class="user_option" id="user_option">
+            <button>Profile</button>
+            <button>Favourite</button>
+            <button>Payments</button>
+            <button onclick="logout()">Logout</button>
           </div>
-        </button>
+        </div>
       </nav>
 
       <div class="inner_container">
@@ -126,4 +132,5 @@
   <script src="../../Backened/Time/time.js"></script>
   <script src="../../Backened/Search/booklist.js"></script>
   <script src="../../Backened/Search/search_field.js"></script>
+  <script src="../../Backened/logout/app.js"></script>
 </html>

@@ -46,10 +46,12 @@ body {
 
 .side_nav a {
     text-decoration: none;
-    color: black;
     font-size: 22px;
+    color: black;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
     height: 40px;
 }
 
@@ -186,17 +188,23 @@ input[type=text] {
 
 }
 
+
 .user {
     height: 40px;
-    width: 100px;
+    width: 120px;
     margin-right: 20px;
-
+    padding: 8px;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user i {
     padding: 6px;
 }
-
 .user_option {
     display: none;
     top: 3rem;
@@ -211,12 +219,6 @@ input[type=text] {
     border-radius: 6%;
     transition: all .3s ease-in-out;
 }
-
-.user_option a {
-    text-decoration: none;
-    color: black;
-}
-
 .inner_container {
     background-color: rgba(211, 208, 208, 0.479);
     height: 100vh;
@@ -264,7 +266,7 @@ input[type=text] {
     width: 500px;
 }
 
-.book_title {
+.that_book_title {
     font-size: 50px;
     font-weight: 100;
 }

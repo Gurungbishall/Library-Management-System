@@ -20,8 +20,8 @@ async function book_profile() {
              <img src="${book.attachment}" />
          </div>
       <div class = "book_profile_top_middle">
-        <p class = "book_title">${book.title}</p>
-        <p class = "book_author">by ${book.author}</p>
+        <p class = "that_book_title">${book.title}</p>
+        <p class = "that_book_author">by ${book.author}</p>
         <p class = "edition">Second edition</p>
         <p class = "rating">
         <i class="fa-solid fa-star" style = "color: gold;"></i>
@@ -34,7 +34,7 @@ async function book_profile() {
         <p class = "available">Availability
         <span>Hard copy</span>
         </p>
-        <button>Borrow</button>
+        <button class = "Borrow_btn" borrow-book-id = ${book.id} onclick = "borrow_book(event)">Borrow</button>
       </div>
       </div>
     

@@ -150,6 +150,7 @@ input[type=text] {
     gap: 10px;
     width: 200px;
     border: 2px solid black;
+    cursor: pointer;
 }
 
 .book_search img {
@@ -190,11 +191,16 @@ input[type=text] {
 
 .user {
     height: 40px;
-    width: 100px;
+    width: 120px;
     margin-right: 20px;
-
+    padding: 8px;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .user i {
     padding: 6px;
 }
@@ -212,11 +218,6 @@ input[type=text] {
     background: white;
     border-radius: 6%;
     transition: all .3s ease-in-out;
-}
-
-.user_option a {
-    text-decoration: none;
-    color: black;
 }
 
 .inner_container {
