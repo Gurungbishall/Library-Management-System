@@ -24,16 +24,23 @@ form.addEventListener("submit", (event) => {
     .then((data) => {
       console.log(data);
 
-      if (data.success === true && data.data.isAdmin == false) {
+      if (data.data.isAdmin === false) {
         localStorage.removeItem("UserId");
         localStorage.removeItem("Username");
 
         localStorage.setItem("UserId", data.data.user.id);
         localStorage.setItem("Username", data.data.user.name);
 
-        // window.location.href = "Frontend/Student/StudentHome.html";
-      } else if (data.success === true && data.data.isAdmin == true) {
-        
+        window.location.href = "Frontend/Student/StudentHome.html";
+      } else if (data.data.isAdmin === true) {
+        localStorage.removeItem("UserId");
+        localStorage.removeItem("Username");
+
+        localStorage.setItem("UserId", data.data.user.id);
+        localStorage.setItem("Username", data.data.user.name);
+
+        console.log(data.data.user.name);
+
         window.location.href = "Frontend/Admin/admin.html";
       } else {
         alert("Wrong password");

@@ -1,8 +1,8 @@
-username()
-async function username(){
-
+username();
+async function username() {
   //username//
   const username = localStorage.getItem("Username").slice(0, 5);
+  console.log(username);
   document
     .getElementById("user_name")
     .insertAdjacentHTML("beforeend", username);
@@ -81,7 +81,6 @@ function debounce(func, delay) {
 }
 
 form_search.addEventListener("input", debounce(book, 300));
-
 
 //To click on cook and go to book details//
 function book_profile_id(event) {
