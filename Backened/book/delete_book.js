@@ -1,27 +1,34 @@
-function delete_book(event) {
+async function delete_book(event) {
   const target = event.target;
   const bookId = target.getAttribute("data-book-id");
 
-  fetch("https://lms-backend.sachetsubedi001.com.np/api/books", {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ id: bookId }),
-  })
-    .then((res) => {
-      if (!res.ok) {
-        console.log("Problem");
-        return;
+  target.innerHTML = "Deleting...";
+
+  try {
+    const response = await fetch(
+      "https://lms-backend.sachetsubedi001.com.np/api/books",
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id: bookId }),
       }
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => console.log("problem"));
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data);
+
+    alert("Book deleted successfully");
+  } catch (error) {
+    console.error("Error deleting book:", error);
+  }
 
   setTimeout(() => {
     location.reload();
-  }, 2000);
+  }, 1000);
 }
